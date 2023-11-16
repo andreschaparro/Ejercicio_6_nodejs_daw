@@ -17,7 +17,6 @@ app.get("/devices/:id", (req, res) => {
 });
 
 app.post("/devices", (req, res) => {
-    console.log(req.params)
     let datosFiltrados = datos.filter(item => item.id == req.body.id);
     if (datosFiltrados.length > 0) {
         datosFiltrados[0].state = req.body.state;
